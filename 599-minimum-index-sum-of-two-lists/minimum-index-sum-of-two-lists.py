@@ -12,12 +12,12 @@ class Solution(object):
         for j in range(len(list2)):
             if list2[j] in k:
                 p[list2[j]]=k[list2[j]]+j
-        l=sorted(p.items(),key=lambda x:x[1])
+        
         u=float('inf')
         ans=[]
-        for i in l:
-            u=min(u,i[1])
-        for i in l:
-            if i[1]==u:
-                ans.append(i[0])
+        for i in p:
+            u=min(u,p[i])
+        for i in p:
+            if p[i]==u:
+                ans.append(i)
         return ans
