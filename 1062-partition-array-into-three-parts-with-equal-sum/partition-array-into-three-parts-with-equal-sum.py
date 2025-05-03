@@ -11,6 +11,6 @@ class Solution(object):
             if curr_sum == target:
                 count += 1
                 curr_sum = 0
-            if count == 2 and i < len(arr) - 1:
+            if count == 3:
                 return True
         return False
