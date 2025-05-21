@@ -15,11 +15,11 @@ class Solution(object):
         def s(root):
             if not root:
                 return
-            ans.append(root.val)
             s(root.left)
+            ans.append(root.val)
             s(root.right)
             
         s(root)
-        ans.sort()
+        
         print(ans)
         return ans[k-1]
