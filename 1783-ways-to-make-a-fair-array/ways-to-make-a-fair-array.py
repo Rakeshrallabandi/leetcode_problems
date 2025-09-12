@@ -2,11 +2,11 @@ from typing import List
 
 class Solution:
     def waysToMakeFair(self, nums: List[int]) -> int:
-        even = [0]   # prefix sum of even indices
-        odd = [0]    # prefix sum of odd indices
+        even = [0]   
+        odd = [0]    
         c = 0
 
-        # Build prefix sums
+        
         for i in range(len(nums)):
             if i % 2 == 0:
                 even.append(even[-1] + nums[i])
